@@ -1,0 +1,38 @@
+import math
+
+# Función para calcular el área de un cuadrado
+def area_cuadrado(lado):
+    return lado ** 2
+
+# Función para calcular el área de un rectángulo
+def area_rectangulo(base, altura):
+    return base * altura
+
+# Función para calcular el área de un círculo
+def area_circulo(radio):
+    return math.pi * (radio ** 2)
+
+# Menú principal
+while True:
+    print("\n--- Calculadora de Áreas ---")
+    print("1. Calcular área de un cuadrado")
+    print("2. Calcular área de un rectángulo")
+    print("3. Calcular área de un círculo")
+    print("4. Salir")
+    opcion = input("Seleccione una opción: ")
+
+    if opcion == "1":
+        lado = float(input("Ingrese la longitud del lado del cuadrado: "))
+        print(f"El área del cuadrado es: {area_cuadrado(lado):.2f}")
+    elif opcion == "2":
+        base = float(input("Ingrese la base del rectángulo: "))
+        altura = float(input("Ingrese la altura del rectángulo: "))
+        print(f"El área del rectángulo es: {area_rectangulo(base, altura):.2f}")
+    elif opcion == "3":
+        radio = float(input("Ingrese el radio del círculo: "))
+        print(f"El área del círculo es: {area_circulo(radio):.2f}")
+    elif opcion == "4":
+        print("Saliendo de la calculadora de áreas. ¡Hasta luego!")
+        break
+    else:
+        print("Opción inválida. Intente nuevamente.")
